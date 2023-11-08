@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libmd
+Description: Message Digest functions from BSD systems (provided by libcobalt)
+Version: 1.0.4
+URL: https://github.com/CobaltBSD/cbtutils
+Libs: -L${libdir} -lmd
+Cflags: -I${includedir}
