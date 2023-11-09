@@ -11,7 +11,6 @@ HDRS=	base64.h \
 	siphash.h \
 	bsd/util.h \
 	vis.h \
-	pledge.h \
 	unveil.h \
 	sys/endian.h \
 	sys/tree.h \
@@ -82,10 +81,10 @@ install:
 	install -m755 libcobalt.so "${DESTDIR}/usr/lib"
 	install -m755 -d "${DESTDIR}/usr/lib/pkgconfig"
 	install -m644 libbsd.pc libmd.pc libcobalt.pc "${DESTDIR}/usr/lib/pkgconfig"
+	install -m755 -d "${DESTDIR}/usr/share/man/man2"
 	install -m755 -d "${DESTDIR}/usr/share/man/man3"
-	install -m644 radixsort.3 "${DESTDIR}/usr/share/man/man3"
+	install -m644 *.2 "${DESTDIR}/usr/share/man/man2"
+	install -m644 *.3 "${DESTDIR}/usr/share/man/man3"
 
 $(OBJS):
 	$(CC) $(CFLAGS) $(LDFLAGS) -c $(basename $@).c
-
-#TODO: man pages

@@ -1,10 +1,10 @@
 #ifndef PLEDGE_LIBC_CALLS_PLEDGE_INTERNAL_H_
 #define PLEDGE_LIBC_CALLS_PLEDGE_INTERNAL_H_
 
-#include "pledge.h"
 #include "promises.h"
 #include <stdint.h>
 #include <stddef.h>
+#include <bsd/unistd.h>
 
 #define ROUNDUP(X, K) (((X) + (K)-1) & -(K))
 #define ARRAYLEN(A) \
