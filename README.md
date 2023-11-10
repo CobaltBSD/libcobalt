@@ -8,3 +8,5 @@ This library contains a symbol for `unveil`, but it is currently a stub and does
 
 # Building
 `make` and `make DESTDIR=$PWD/DEST install`
+
+Note that libcobalt contains various files that might conflict with others on your system, such as pkg-config files and symlinks for libbsd and libmd. For this reason, you should take care when installing to make sure that nothing is being overwritten.
